@@ -11,41 +11,61 @@
 body{
 background:#050505;
 color:#fff;
-font-family:Arial, Helvetica, sans-serif;
+font-family:Arial,Helvetica,sans-serif;
 }
 
 header{
-height:76px;
+height:90px;
 display:flex;
 align-items:center;
-justify-content:space-between;
 padding:0 28px;
 background:#0b0b0b;
 border-bottom:1px solid #1f1f1f;
 }
 
-.logo{
+.logo-area{
 display:flex;
 align-items:center;
-gap:12px;
+gap:14px;
 }
 
-.symbol{
-width:42px;
-height:42px;
+.logo-simbolo{
+width:58px;
+height:58px;
 border-radius:50%;
-background:linear-gradient(135deg,#ff6a00 0 50%,#fff 50% 100%);
-box-shadow:0 0 18px rgba(255,106,0,.45);
+background:linear-gradient(135deg,#ff6a00 0 50%,#f5f5f5 50% 100%);
+box-shadow:0 0 22px rgba(255,106,0,.45);
+position:relative;
+overflow:hidden;
 }
 
-.brand strong{
-font-size:28px;
+.logo-simbolo:after{
+content:"";
+position:absolute;
+width:18px;
+height:70px;
+background:#050505;
+left:28px;
+top:-6px;
+border-radius:50%;
+transform:rotate(18deg);
+opacity:.9;
+}
+
+.logo-texto strong{
+font-size:32px;
 letter-spacing:1px;
 }
 
-.brand .in{color:#ff6a00}
-.brand .foco{color:#2b2b2b;background:#fff;padding:0 4px;border-radius:3px}
-.brand small{display:block;color:#aaa;font-size:12px;margin-top:2px}
+.logo-texto .in{color:#ff6a00}
+.logo-texto .foco{color:#444}
+.logo-texto small{
+display:block;
+font-size:13px;
+color:#aaa;
+letter-spacing:2px;
+margin-top:2px;
+}
 
 main{
 display:grid;
@@ -82,11 +102,7 @@ position:relative;
 overflow:hidden;
 }
 
-.phone-video h1{
-font-size:28px;
-z-index:2;
-}
-
+.phone-video h1{font-size:28px}
 .phone-video span{
 display:block;
 color:#ff6a00;
@@ -139,21 +155,6 @@ font-size:14px;
 
 .ouro{color:#d6a72c;font-weight:bold}
 
-.buttons{
-display:grid;
-gap:10px;
-}
-
-button{
-padding:14px;
-border:0;
-border-radius:14px;
-background:#ff6a00;
-color:#fff;
-font-weight:bold;
-cursor:pointer;
-}
-
 .banner{
 height:90px;
 display:flex;
@@ -163,6 +164,18 @@ border:1px solid #ff6a00;
 color:#ff6a00;
 font-weight:bold;
 letter-spacing:1px;
+}
+
+.buttons{display:grid;gap:10px}
+
+button{
+padding:14px;
+border:0;
+border-radius:14px;
+background:#ff6a00;
+color:#fff;
+font-weight:bold;
+cursor:pointer;
 }
 
 footer{
@@ -177,6 +190,7 @@ main{grid-template-columns:1fr;padding:14px}
 .stage{min-height:auto}
 .phone-video{width:100%;max-width:390px;height:690px}
 header{padding:0 16px}
+.logo-texto strong{font-size:26px}
 }
 </style>
 </head>
@@ -184,10 +198,18 @@ header{padding:0 16px}
 <body>
 
 <header>
-<div class="logo">
-<img src="LOGOTIPO%20PNG.png" alt="INFOCO" style="height:70px;">
+<div class="logo-area">
+<div class="logo-simbolo"></div>
+<div class="logo-texto">
+<strong><span class="in">IN</span><span class="foco">FOCO</span></strong>
+<small>MOSTRE-SE AO MUNDO</small>
+</div>
 </div>
 </header>
+
+<main>
+
+<section class="stage">
 <div class="phone-video">
 <div>
 <h1>VÍDEO 9:16</h1>
@@ -208,9 +230,7 @@ header{padding:0 16px}
 </div>
 </div>
 
-<div class="card banner">
-INFOCO ADS
-</div>
+<div class="card banner">INFOCO ADS</div>
 
 <div class="card">
 <h2>Participe</h2>
