@@ -1,123 +1,186 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>INFOCO</title>
+
+<title>INFOCO TV MUSIC</title>
 
 <style>
 
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
 body{
-    margin:0;
-    background:#050505;
-    color:white;
-    font-family:Arial, sans-serif;
+background:#070707;
+font-family:Arial, Helvetica, sans-serif;
+color:white;
 }
 
 header{
-    background:#111;
-    padding:15px;
-    border-bottom:1px solid #333;
+height:80px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:0 30px;
+border-bottom:1px solid #1f1f1f;
+background:#090909;
 }
 
 .logo{
-    color:#ff6a00;
-    font-size:28px;
-    font-weight:bold;
+font-size:32px;
+font-weight:bold;
+color:#9c27ff;
 }
 
 .slogan{
-    color:#ffffff;
-    font-size:14px;
+font-size:14px;
+color:#999;
 }
 
-.container{
-    display:flex;
-    flex-wrap:wrap;
-    padding:20px;
-    gap:20px;
+.main{
+display:grid;
+grid-template-columns: 2fr 1fr;
+gap:20px;
+padding:20px;
 }
 
-.video{
-    flex:2;
-    min-height:600px;
-    background:#111;
-    border-radius:20px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    border:2px solid #ff6a00;
+.video-area{
+background:#0d0d0d;
+border:2px solid #9c27ff;
+border-radius:25px;
+height:700px;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:40px;
+font-weight:bold;
+color:white;
 }
 
-.chat{
-    flex:1;
-    min-height:600px;
-    background:#111;
-    border-radius:20px;
-    padding:20px;
+.sidebar{
+background:#111;
+border-radius:25px;
+padding:20px;
+}
+
+.sidebar h2{
+margin-bottom:20px;
+color:#bb86fc;
+}
+
+.chat-box{
+height:400px;
+background:#080808;
+border:1px solid #222;
+border-radius:15px;
+padding:15px;
+overflow:auto;
+margin-bottom:20px;
+}
+
+.chat-msg{
+margin-bottom:10px;
+padding:10px;
+background:#1a1a1a;
+border-radius:10px;
+}
+
+.btn{
+width:100%;
+padding:15px;
+margin-bottom:10px;
+border:none;
+border-radius:12px;
+background:#9c27ff;
+color:white;
+font-size:16px;
+cursor:pointer;
 }
 
 .banner{
-    margin:20px;
-    background:#111;
-    border:1px solid #ff6a00;
-    padding:20px;
-    text-align:center;
-    border-radius:15px;
+margin:20px;
+height:120px;
+border:2px solid #9c27ff;
+border-radius:20px;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:28px;
+font-weight:bold;
+background:#111;
 }
 
-.botoes{
-    display:flex;
-    gap:10px;
-    margin-top:20px;
+footer{
+text-align:center;
+padding:20px;
+color:#777;
 }
 
-button{
-    background:#ff6a00;
-    color:white;
-    border:none;
-    padding:12px;
-    border-radius:10px;
-    cursor:pointer;
+@media(max-width:900px){
+
+.main{
+grid-template-columns:1fr;
+}
+
+.video-area{
+height:500px;
+}
+
 }
 
 </style>
-
 </head>
 
 <body>
 
 <header>
-<div class="logo">INFOCO</div>
-<div class="slogan">Mostre-se ao mundo</div>
+
+<div>
+<div class="logo">INFOCO TV MUSIC</div>
+<div class="slogan">Sua Rádio Online 24h</div>
+</div>
+
 </header>
 
-<div class="container">
+<div class="main">
 
-<div class="video">
-<h1>ÁREA DE VÍDEO 9:16</h1>
+<div class="video-area">
+VÍDEO 9:16
 </div>
 
-<div class="chat">
+<div class="sidebar">
 
-<h2>💬 Chat ao Vivo</h2>
+<h2>💬 CHAT AO VIVO</h2>
 
-<p>Bem-vindo à INFOCO.</p>
+<div class="chat-box">
 
-<div class="botoes">
-<button>Enviar Vídeo</button>
-<button>Enviar Música</button>
+<div class="chat-msg">
+Bem-vindo à INFOCO TV MUSIC.
 </div>
+
+</div>
+
+<button class="btn">🎬 ENVIAR VÍDEO</button>
+
+<button class="btn">🎵 ENVIAR MÚSICA</button>
+
+<button class="btn">⭐ COMPRAR CRÉDITOS</button>
 
 </div>
 
 </div>
 
 <div class="banner">
-BANNER INFOCO ADS
+INFOCO ADS
 </div>
 
-</body>
+<footer>
+© INFOCO TV MUSIC
+</footer>
 
+</body>
 </html>
