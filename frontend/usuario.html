@@ -4,92 +4,238 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>INFOCO | Painel do Usuário</title>
+
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{background:#050505;color:#fff;font-family:Arial,Helvetica,sans-serif}
-header{height:86px;background:#0b0b0b;border-bottom:1px solid #1f1f1f;display:flex;align-items:center;padding:0 28px}
-.logo{display:flex;align-items:center;gap:12px}
-.logo-symbol{width:54px;height:54px;border-radius:50%;background:linear-gradient(135deg,#ff6a00 0 50%,#f5f5f5 50% 100%);box-shadow:0 0 22px rgba(255,106,0,.4)}
-.logo h1{font-size:28px;color:#ff6a00}
-.logo h1 span{color:#444}
-.logo small{display:block;color:#aaa;letter-spacing:2px}
-main{max-width:1200px;margin:auto;padding:24px;display:grid;grid-template-columns:280px 1fr;gap:22px}
-.card{background:#111;border:1px solid #222;border-radius:22px;padding:20px}
-.profile{text-align:center}
-.avatar{width:110px;height:110px;border-radius:50%;background:linear-gradient(135deg,#ff6a00,#222);margin:auto;display:flex;align-items:center;justify-content:center;font-size:42px}
-.profile h2{margin-top:14px}.profile p{color:#aaa;margin-top:6px}
-.credits{font-size:34px;color:#ff6a00;font-weight:bold;margin-top:12px}
-.menu{display:grid;gap:10px;margin-top:18px}
-button{padding:14px;border:0;border-radius:14px;background:#ff6a00;color:#fff;font-weight:bold;cursor:pointer}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:18px}
-.stat h3{color:#ff6a00;font-size:28px}.stat p{color:#aaa}
-.section h2{color:#ff6a00;margin-bottom:14px}
-.uploads{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.box{height:180px;border:1px dashed #ff6a00;border-radius:18px;display:flex;align-items:center;justify-content:center;text-align:center;color:#ccc;background:#080808;cursor:pointer}
-.table{margin-top:18px}
-.row{display:grid;grid-template-columns:1fr 120px 120px;gap:10px;padding:12px;border-bottom:1px solid #222;color:#ccc}
-.row strong{color:#fff}
-footer{text-align:center;color:#777;padding:18px}
-@media(max-width:900px){main{grid-template-columns:1fr}.grid,.uploads{grid-template-columns:1fr}.row{grid-template-columns:1fr}}
+
+body{
+background:#050505;
+color:#fff;
+font-family:Arial,Helvetica,sans-serif;
+}
+
+header{
+height:90px;
+background:#0b0b0b;
+border-bottom:1px solid #222;
+display:flex;
+align-items:center;
+padding:0 25px;
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:15px;
+}
+
+.logo img{
+height:70px;
+}
+
+main{
+max-width:1400px;
+margin:auto;
+padding:25px;
+display:grid;
+grid-template-columns:280px 1fr;
+gap:25px;
+}
+
+.card{
+background:#111;
+border:1px solid #222;
+border-radius:20px;
+padding:20px;
+}
+
+.profile{
+text-align:center;
+}
+
+.profile h2{
+margin-top:15px;
+}
+
+.credits{
+font-size:52px;
+color:#ff6a00;
+font-weight:bold;
+margin:15px 0;
+}
+
+.btn{
+display:block;
+width:100%;
+padding:15px;
+margin-top:10px;
+border:none;
+border-radius:12px;
+background:#ff6a00;
+color:#fff;
+font-weight:bold;
+cursor:pointer;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:15px;
+margin-bottom:20px;
+}
+
+.stat{
+background:#111;
+border:1px solid #222;
+border-radius:18px;
+padding:20px;
+}
+
+.stat h3{
+font-size:40px;
+color:#ff6a00;
+}
+
+.uploads{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:15px;
+margin-top:15px;
+}
+
+.upload-box{
+height:180px;
+border:2px dashed #ff6a00;
+border-radius:20px;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+}
+
+table{
+width:100%;
+margin-top:20px;
+border-collapse:collapse;
+}
+
+th,td{
+padding:14px;
+border-bottom:1px solid #222;
+text-align:left;
+}
+
+footer{
+text-align:center;
+color:#777;
+padding:20px;
+}
+
+@media(max-width:900px){
+main{
+grid-template-columns:1fr;
+}
+.grid,.uploads{
+grid-template-columns:1fr;
+}
+}
 </style>
 </head>
+
 <body>
 
 <header>
 <div class="logo">
-    <img src="LOGOTIPO PNG.png" alt="INFOCO" style="height:70px;">
-    <div>
-        <h1>INFOCO</h1>
-        <small>PAINEL DO USUÁRIO</small>
-    </div>
+<img src="LOGOTIPO PNG.png" alt="INFOCO">
 </div>
 </header>
 
 <main>
 
-<aside class="card profile">
-<div class="avatar">👤</div>
+<div class="card profile">
 <h2>Usuário INFOCO</h2>
 <p>@participante</p>
+
 <div class="credits">120</div>
 <p>créditos disponíveis</p>
-<div class="menu">
-<button onclick="window.location.href='enviar.html'">🎬 Enviar Vídeo</button>
-<button onclick="window.location.href='enviar.html'">🎵 Enviar Música</button>
-<button>⭐ Comprar Créditos</button>
-<button>🏆 Meu Ranking</button>
-</div>
-</aside>
 
-<section>
+<button class="btn">Enviar Vídeo</button>
+<button class="btn">Enviar Música</button>
+<button class="btn">Comprar Créditos</button>
+<button class="btn">Meu Ranking</button>
+</div>
+
+<div>
 
 <div class="grid">
-<div class="card stat"><h3>18</h3><p>Vídeos enviados</p></div>
-<div class="card stat"><h3>7</h3><p>Músicas enviadas</p></div>
-<div class="card stat"><h3>4.8K</h3><p>Alcance total</p></div>
+<div class="stat">
+<h3>18</h3>
+<p>Vídeos enviados</p>
 </div>
 
-<div class="card section">
-<h2>Enviar conteúdo</h2>
+<div class="stat">
+<h3>7</h3>
+<p>Músicas enviadas</p>
+</div>
+
+<div class="stat">
+<h3>4.8K</h3>
+<p>Alcance total</p>
+</div>
+</div>
+
+<div class="card">
+<h2 style="color:#ff6a00">Enviar conteúdo</h2>
+
 <div class="uploads">
-<div class="box" onclick="window.location.href='enviar.html'">🎬 Clique para enviar vídeo<br>até 10 minutos</div>
-<div class="box" onclick="window.location.href='enviar.html'">🎵 Clique para enviar música<br>até 8 minutos</div>
+<div class="upload-box">
+🎬 Clique para enviar vídeo<br>até 10 minutos
+</div>
+
+<div class="upload-box">
+🎵 Clique para enviar música<br>até 8 minutos
+</div>
 </div>
 </div>
 
-<div class="card section table">
-<h2>Histórico recente</h2>
-<div class="row"><strong>Conteúdo</strong><strong>Status</strong><strong>Alcance</strong></div>
-<div class="row"><span>Vídeo: Paranaguá em destaque</span><span>Aprovado</span><span>1.250</span></div>
-<div class="row"><span>Música: Nova faixa</span><span>Análise</span><span>---</span></div>
-<div class="row"><span>Vídeo: Talento local</span><span>Publicado</span><span>890</span></div>
+<div class="card" style="margin-top:20px;">
+<h2 style="color:#ff6a00">Histórico recente</h2>
+
+<table>
+<tr>
+<th>Conteúdo</th>
+<th>Status</th>
+<th>Alcance</th>
+</tr>
+
+<tr>
+<td>Vídeo: Paranaguá em destaque</td>
+<td>Aprovado</td>
+<td>1.250</td>
+</tr>
+
+<tr>
+<td>Música: Nova faixa</td>
+<td>Análise</td>
+<td>---</td>
+</tr>
+
+<tr>
+<td>Vídeo: Talento local</td>
+<td>Publicado</td>
+<td>890</td>
+</tr>
+</table>
+
 </div>
 
-</section>
+</div>
 
 </main>
 
-<footer>INFOCO — Mostre-se ao mundo.</footer>
+<footer>
+INFOCO — Mostre-se ao mundo.
+</footer>
 
 </body>
 </html>
