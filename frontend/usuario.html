@@ -7,24 +7,25 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{background:#050505;color:#fff;font-family:Arial,Helvetica,sans-serif}
-header{height:86px;background:#0b0b0b;border-bottom:1px solid #1f1f1f;display:flex;align-items:center;justify-content:space-between;padding:0 28px}
+header{height:86px;background:#0b0b0b;border-bottom:1px solid #1f1f1f;display:flex;align-items:center;padding:0 28px}
 .logo{display:flex;align-items:center;gap:12px}
-.simbolo{width:54px;height:54px;border-radius:50%;background:linear-gradient(135deg,#ff6a00 0 50%,#f5f5f5 50% 100%);box-shadow:0 0 22px rgba(255,106,0,.4)}
-.logo h1{font-size:28px;color:#ff6a00}.logo span{color:#444}.logo small{display:block;color:#aaa;letter-spacing:2px}
-.user{color:#ccc}
+.logo-symbol{width:54px;height:54px;border-radius:50%;background:linear-gradient(135deg,#ff6a00 0 50%,#f5f5f5 50% 100%);box-shadow:0 0 22px rgba(255,106,0,.4)}
+.logo h1{font-size:28px;color:#ff6a00}
+.logo h1 span{color:#444}
+.logo small{display:block;color:#aaa;letter-spacing:2px}
 main{max-width:1200px;margin:auto;padding:24px;display:grid;grid-template-columns:280px 1fr;gap:22px}
 .card{background:#111;border:1px solid #222;border-radius:22px;padding:20px}
 .profile{text-align:center}
 .avatar{width:110px;height:110px;border-radius:50%;background:linear-gradient(135deg,#ff6a00,#222);margin:auto;display:flex;align-items:center;justify-content:center;font-size:42px}
 .profile h2{margin-top:14px}.profile p{color:#aaa;margin-top:6px}
-.creditos{font-size:34px;color:#ff6a00;font-weight:bold;margin-top:12px}
+.credits{font-size:34px;color:#ff6a00;font-weight:bold;margin-top:12px}
 .menu{display:grid;gap:10px;margin-top:18px}
-.menu button,.action{padding:14px;border:0;border-radius:14px;background:#ff6a00;color:#fff;font-weight:bold;cursor:pointer}
+button{padding:14px;border:0;border-radius:14px;background:#ff6a00;color:#fff;font-weight:bold;cursor:pointer}
 .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:18px}
 .stat h3{color:#ff6a00;font-size:28px}.stat p{color:#aaa}
 .section h2{color:#ff6a00;margin-bottom:14px}
 .uploads{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.box{height:180px;border:1px dashed #ff6a00;border-radius:18px;display:flex;align-items:center;justify-content:center;text-align:center;color:#ccc;background:#080808}
+.box{height:180px;border:1px dashed #ff6a00;border-radius:18px;display:flex;align-items:center;justify-content:center;text-align:center;color:#ccc;background:#080808;cursor:pointer}
 .table{margin-top:18px}
 .row{display:grid;grid-template-columns:1fr 120px 120px;gap:10px;padding:12px;border-bottom:1px solid #222;color:#ccc}
 .row strong{color:#fff}
@@ -36,13 +37,12 @@ footer{text-align:center;color:#777;padding:18px}
 
 <header>
 <div class="logo">
-<div class="simbolo"></div>
+<div class="logo-symbol"></div>
 <div>
 <h1>IN<span>FOCO</span></h1>
 <small>PAINEL DO USUÁRIO</small>
 </div>
 </div>
-<div class="user">Olá, participante INFOCO</div>
 </header>
 
 <main>
@@ -51,11 +51,11 @@ footer{text-align:center;color:#777;padding:18px}
 <div class="avatar">👤</div>
 <h2>Usuário INFOCO</h2>
 <p>@participante</p>
-<div class="creditos">120</div>
+<div class="credits">120</div>
 <p>créditos disponíveis</p>
 <div class="menu">
-<button>🎬 Enviar Vídeo</button>
-<button>🎵 Enviar Música</button>
+<button onclick="window.location.href='enviar.html'">🎬 Enviar Vídeo</button>
+<button onclick="window.location.href='enviar.html'">🎵 Enviar Música</button>
 <button>⭐ Comprar Créditos</button>
 <button>🏆 Meu Ranking</button>
 </div>
@@ -72,8 +72,8 @@ footer{text-align:center;color:#777;padding:18px}
 <div class="card section">
 <h2>Enviar conteúdo</h2>
 <div class="uploads">
-<div class="box">🎬 Clique para enviar vídeo<br>até 10 minutos</div>
-<div class="box">🎵 Clique para enviar música<br>até 8 minutos</div>
+<div class="box" onclick="window.location.href='enviar.html'">🎬 Clique para enviar vídeo<br>até 10 minutos</div>
+<div class="box" onclick="window.location.href='enviar.html'">🎵 Clique para enviar música<br>até 8 minutos</div>
 </div>
 </div>
 
