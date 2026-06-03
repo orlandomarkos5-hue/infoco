@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>INFOCO | Enviar Conteúdo</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+background:#050505;
+color:white;
+}
+
+header{
+background:#111;
+padding:20px;
+border-bottom:1px solid #222;
+}
+
+.logo{
+font-size:32px;
+font-weight:bold;
+color:#ff6a00;
+}
+
+.container{
+max-width:1200px;
+margin:auto;
+padding:30px;
+}
+
+.titulo{
+font-size:32px;
+margin-bottom:10px;
+}
+
+.sub{
+color:#999;
+margin-bottom:30px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:20px;
+}
+
+.card{
+background:#111;
+border:1px solid #222;
+border-radius:20px;
+padding:25px;
+}
+
+.card h2{
+color:#ff6a00;
+margin-bottom:15px;
+}
+
+.info{
+color:#ccc;
+line-height:1.7;
+margin-bottom:20px;
+}
+
+.upload{
+border:2px dashed #ff6a00;
+border-radius:15px;
+padding:40px;
+text-align:center;
+color:#aaa;
+margin-bottom:20px;
+}
+
+button{
+width:100%;
+padding:15px;
+border:none;
+border-radius:12px;
+background:#ff6a00;
+color:white;
+font-size:16px;
+font-weight:bold;
+cursor:pointer;
+}
+
+.voltar{
+margin-top:20px;
+background:#333;
+}
+
+@media(max-width:900px){
+
+.grid{
+grid-template-columns:1fr;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+<div class="logo">
+INFOCO
+</div>
+</header>
+
+<div class="container">
+
+<h1 class="titulo">
+Enviar Conteúdo
+</h1>
+
+<p class="sub">
+Mostre seu talento para o mundo.
+</p>
+
+<div class="grid">
+
+<div class="card">
+
+<h2>🎬 Enviar Vídeo</h2>
+
+<div class="info">
+Vídeos de até 10 minutos.<br>
+Formato vertical 9:16 recomendado.<br>
+Conteúdo sujeito à aprovação.
+</div>
+
+<div class="upload">
+Selecionar Vídeo
+</div>
+
+<button>
+Enviar Vídeo
+</button>
+
+</div>
+
+<div class="card">
+
+<h2>🎵 Enviar Música</h2>
+
+<div class="info">
+Músicas de até 8 minutos.<br>
+MP3 recomendado.<br>
+Conteúdo sujeito à aprovação.
+</div>
+
+<div class="upload">
+Selecionar Música
+</div>
+
+<button>
+Enviar Música
+</button>
+
+</div>
+
+</div>
+
+<button class="voltar" onclick="window.location.href='usuario.html'">
+⬅ Voltar ao Painel
+</button>
+
+</div>
+
+</body>
+</html>
