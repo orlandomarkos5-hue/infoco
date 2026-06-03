@@ -108,7 +108,14 @@ grid-template-columns:1fr;
 </style>
 
 </head>
-
+<script>
+function previewVideo(event){
+  const file = event.target.files[0];
+  const video = document.getElementById('videoPreview');
+  video.src = URL.createObjectURL(file);
+  video.style.display = 'block';
+}
+</script>
 <body>
 
 <header>
@@ -139,8 +146,8 @@ Formato vertical 9:16 recomendado.<br>
 Conteúdo sujeito à aprovação.
 </div>
 
-<input type="file" accept="video/*">
-
+<input type="file" accept="video/*" onchange="previewVideo(event)">
+<video id="videoPreview" controls style="width:100%;margin-top:15px;border-radius:15px;display:none;"></video>
 <button>
 Enviar Vídeo
 </button>
